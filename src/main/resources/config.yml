@@ -1,0 +1,104 @@
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+#                                                                       #
+#                   LokisDeathMessages by TrollyLoki                    #
+#     https://www.spigotmc.org/resources/lokis-death-messages.55023     #
+#           https://github.com/TrollyLoki/LokisDeathMessages            #
+#                                                                       #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+# Welcome to the config file for Loki's Death Messages!
+
+# A full list of commands / settings can be found on the Spigot page
+
+# By default death messages will remain mostly vanilla looking
+
+players:
+  enabled: true
+  died-message: '%victim name% %cause%'
+  killed-message: '%victim name% %cause% %killer name%'
+  custom:
+    # Custom player messages are applied from top to bottom, so if a player has multiple permissions the highest one on this list will be used
+    enabled: false
+    permissions: # Without the 'deathmsg.custom.' part
+      admin:
+        died-message: '&c[ADMIN]&r %victim name% %cause%'
+        killed-message: '&c[ADMIN]&r %victim name% %cause% %killer name%'
+
+mobs:
+  enabled: false
+  died-message: '%victim name% %cause%'
+  killed-message: '%victim name% %cause% %killer name%'
+  custom:
+    enabled: false
+    types: # List of Types: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/EntityType.html
+      cow: # Make type names lowercase
+        died-message: '&9Moooo!&r %victim name% %cause%'
+        killed-message: '&9Cow Murder!&r %victim name% %cause% %killer name%'
+        
+causes: # List of Causes: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/entity/EntityDamageEvent.DamageCause.html
+  died:
+    BLOCK_EXPLOSION: 'blew up'
+    CONTACT: 'was pricked to death'
+    CRAMMING: 'was squished too much'
+    CUSTOM: 'died'
+    DRAGON_BREATH: 'was burned by dragon''s breath'
+    DROWNING: 'drowned'
+    DRYOUT: 'dried out'
+    ENTITY_ATTACK: 'was slain'
+    ENTITY_EXPLOSION: 'blew up'
+    ENTITY_SWEEP_ATTACK: 'was slain'
+    FALL: 'fell from a high place'
+    FALLING_BLOCK: 'was squashed by a block'
+    FIRE: 'went up in flames'
+    FIRE_TICK: 'burned to death'
+    FLY_INTO_WALL: 'experienced kinetic energy'
+    HOT_FLOOR: 'discovered the floor was lava'
+    LAVA: 'tried to swim in lava'
+    LIGHTNING: 'was struck by lightning'
+    MAGIC: 'was killed by magic'
+    MELTING: 'melted'
+    POISON: 'was poisoned'
+    PROJECTILE: 'was shot'
+    STARVATION: 'starved to death'
+    SUFFOCATION: 'suffocated in a wall'
+    SUICIDE: 'was /killed'
+    THORNS: 'was killed'
+    VOID: 'fell out of the world'
+    WITHER: 'withered away'
+  killed:
+    BLOCK_EXPLOSION: 'was blown up by'
+    CONTACT: 'was pricked to death by'
+    CRAMMING: 'was squished too much by'
+    CUSTOM: 'died because of'
+    DRAGON_BREATH: 'was burned by the breath of'
+    DROWNING: 'was drowned by'
+    DRYOUT: 'was dried out by'
+    ENTITY_ATTACK: 'was slain by'
+    ENTITY_EXPLOSION: 'was blown up by'
+    ENTITY_SWEEP_ATTACK: 'was slain by'
+    FALL: 'was dropped from a high place by'
+    FALLING_BLOCK: 'was squashed by a'
+    FIRE: 'was put up in flames by'
+    FIRE_TICK: 'was burned to death by'
+    FLY_INTO_WALL: 'was forced to experience kinetic energy by'
+    HOT_FLOOR: 'was forced to discover the floor was lava by'
+    LAVA: 'was pushed into lava by'
+    LIGHTNING: 'was struck by lightning because of'
+    MAGIC: 'was killed by magic from'
+    MELTING: 'was melted by'
+    POISON: 'was poisoned by'
+    PROJECTILE: 'was shot by'
+    STARVATION: 'was starved to death by'
+    SUFFOCATION: 'was suffocated in a wall by'
+    SUICIDE: 'was /killed while fighting'
+    THORNS: 'was killed by'
+    VOID: 'was dropped out of the world by'
+    WITHER: 'was withered away by'
+
+lang:
+  prefix: '&2&l[LokisDeathMessages] '
+  reload: '&aThe config has been reloaded'
+  update: '&aAn update is available! Download it from %url%'
+
+update-checker: true
+do-not-touch_version: 1.0

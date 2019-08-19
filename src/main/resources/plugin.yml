@@ -1,0 +1,16 @@
+name: LokisDeathMessages
+main: net.trollyloki.LokisDeathMessages.Main
+version: 1.0
+author: TrollyLoki
+website: https://spigotmc.org/resources/lokis-death-messages.55023/
+
+api-version: 1.14
+
+commands:
+  deathmsg:
+  
+permissions:
+  deathmsg.reload:
+    description: Allows the player to reload the config
+  deathmsg.update:
+    description: Allows the player to receive update notifications
